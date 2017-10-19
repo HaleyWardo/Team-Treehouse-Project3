@@ -76,6 +76,7 @@ legend {
     border-radius: 3px;
     background-color: #F0F0F0;
     padding: 1em;
+    height: 3.125em;
     width: 100%;
     color: slategray;
     
@@ -111,6 +112,10 @@ textarea:focus {
     width: 50%;
 }
 
+.flex {
+    padding-bottom: 1em;
+}
+
 .news span {
     display: inline-block;
     padding-bottom: 1em;
@@ -121,7 +126,6 @@ fieldset .padding {
     padding-bottom: 10px;
     padding-left: 10px;
 }
-
 
 .news_topic {
     display: inline-block;
@@ -148,4 +152,37 @@ footer {
     text-align: center;
     color: rgba(53, 70, 87, 0.64);
     font-style: italic;
+}
+
+/* 768px media query  */
+
+@media (min-width: 768px) {
+
+html {
+    width: 60%;
+    max-width: 1024px;
+}
+
+.flex {
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.flex label {
+    width: 30%;
+    padding-top: 1.3em;
+}
+
+.flex input,
+.flex select {
+    width: 70%;
+    
+}
+
+.contact_field input:last-of-type {
+    width: 25%;
+}
+
+
 }
