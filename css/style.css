@@ -62,7 +62,7 @@ legend {
     padding: 1em 0;
 }
 
-.contact .information {
+.information {
     border-top: 2px solid #354657;
     border-bottom: 2px solid #354657;
 }
@@ -79,7 +79,7 @@ legend {
     height: 3.125em;
     width: 100%;
     color: slategray;
-    
+    transition: transform 1s;
 }
 
 .information label,
@@ -89,23 +89,51 @@ legend {
     font-size: 1.125em;
 }
 
-input::placeholder {
+input::placeholder,
+textarea::placeholder {
     font-size: 13px;
     font-style: italic;
     text-align: right;
     color: rgba(53, 70, 87, 0.48);
+    padding-right: 0.5em;
 }
 
+textarea::placeholder {
+    text-align: left;
+}
+
+input:focus:placeholder,
+textarea:focus:placeholder {
+    color:white;
+}
+
+/* disables choose state option */
 option[value=""][disabled] {
     display: none;
   }
 
+ /*Focus and hover psuedo selector */
 input:focus,
 select:focus,
 option:focus,
-textarea:focus {
+textarea:focus{
     outline-color:#354657;
     outline-width: thick;
+    background-color: #354657;
+    color:white;
+}
+
+.information input:hover,
+select:hover,
+textarea:hover {
+    cursor: pointer;
+    transform: translate(3px, 3px);
+    box-shadow: -6px -5px 8px 0px rgba(199,203,207,1);
+}
+
+option:hover,
+.news input:hover {
+    cursor: pointer;
 }
 
 .contact_field input:last-of-type {
@@ -137,7 +165,7 @@ fieldset .padding {
     resize: none;
 }
 
-.news button {
+input[type="submit"] {
     width: 100%;
     font-size: 1.125em;
     padding: 1.125em;
@@ -184,5 +212,5 @@ html {
     width: 25%;
 }
 
-
 }
+
