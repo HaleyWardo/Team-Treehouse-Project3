@@ -23,8 +23,8 @@
                     <span>Get the latest news on how your code is doing right in your inbox</span>
                 </div>
 
-                <form action="index.html" method="post" class="information">
-                    <fieldset class="contact_field">
+                <form action="index.html" method="post">
+                    <fieldset class="contact_field information">
                         <legend>Contact Information</legend>
                         <div class="flex">
                             <label for="name">Full Name</label><br>
@@ -102,10 +102,10 @@
                             <input type="text" id="zip" name="user_zip" class="zip"><br>
                         </div>
                     </fieldset>
-                </form>
+                
 
-                <form action="index.html" method="post" class="news">
-                    <fieldset>
+               
+                    <fieldset class="news">
                         <legend>Newsletter</legend>
 
                         <span>Select the newsletters you would like to receive</span><br>
@@ -127,9 +127,9 @@
                         <input type="radio" id="plain" value="plain" name="user_format">
                         <label for="plain" class="padding">Plain Text</label><br><br>
 
-                        <label class="news_topic">Other topics you'd like to hear about</label><br>
+                        <label for="topic" class="news_topic">Other topics you'd like to hear about</label><br>
                         <textarea id=topic name="user_topic" placeholder="Enter topics here"></textarea><br>
-
+                      
                         <input type="submit" id="sign" value="Sign Up" >
 
 

@@ -50,6 +50,10 @@ legend {
     color: silver;
 }
 
+form {
+    border-top: 2px solid #354657;
+}
+
 fieldset {
     border: none;
     margin: 0;
@@ -63,7 +67,6 @@ legend {
 }
 
 .information {
-    border-top: 2px solid #354657;
     border-bottom: 2px solid #354657;
 }
 
@@ -89,7 +92,7 @@ legend {
     font-size: 1.125em;
 }
 
-input::placeholder,
+.information input::placeholder,
 textarea::placeholder {
     font-size: 13px;
     font-style: italic;
@@ -102,8 +105,8 @@ textarea::placeholder {
     text-align: left;
 }
 
-input:focus:placeholder,
-textarea:focus:placeholder {
+input:focus::placeholder,
+textarea:focus::placeholder {
     color:white;
 }
 
