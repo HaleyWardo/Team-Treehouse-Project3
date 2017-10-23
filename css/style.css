@@ -50,6 +50,8 @@ legend {
     color: silver;
 }
 
+/* FORM STYLES */
+
 form {
     border-top: 2px solid #354657;
 }
@@ -70,8 +72,8 @@ legend {
     border-bottom: 2px solid #354657;
 }
 
-.information input,
-.information select,
+.flex input,
+.flex select,
 .news textarea {
     margin: 10px 0 20px;
     border-style: solid;
@@ -85,15 +87,55 @@ legend {
     transition: transform 1s;
 }
 
-.information label,
+.flex label,
 .news label,
 .news span {
     color: rgba(53, 70, 87, 0.69);
     font-size: 1.125em;
 }
 
-.information input::placeholder,
-textarea::placeholder {
+/* Placeholder */
+.flex input::placeholder{
+    font-size: 13px;
+    font-style: italic;
+    text-align: right;
+    color: rgba(53, 70, 87, 0.48);
+    padding-right: 0.5em;
+}
+
+.flex input::-webkit-input-placeholder{
+    font-size: 13px;
+    font-style: italic;
+    text-align: right;
+    color: rgba(53, 70, 87, 0.48);
+    padding-right: 0.5em;
+}
+
+.flex input::-ms-input-placeholder{
+    font-size: 13px;
+    font-style: italic;
+    text-align: right;
+    color: rgba(53, 70, 87, 0.48);
+    padding-right: 0.5em;
+}
+
+textarea::placeholder{
+    font-size: 13px;
+    font-style: italic;
+    text-align: right;
+    color: rgba(53, 70, 87, 0.48);
+    padding-right: 0.5em;
+}
+
+textarea::-webkit-input-placeholder{
+    font-size: 13px;
+    font-style: italic;
+    text-align: right;
+    color: rgba(53, 70, 87, 0.48);
+    padding-right: 0.5em;
+}
+
+textarea::-ms-input-placeholder{
     font-size: 13px;
     font-style: italic;
     text-align: right;
@@ -105,10 +147,37 @@ textarea::placeholder {
     text-align: left;
 }
 
-input:focus::placeholder,
-textarea:focus::placeholder {
-    color:white;
+textarea::-webkit-input-placeholder{
+    text-align: left;
 }
+
+textarea::-ms-input-placeholder {
+    text-align: left;
+}
+
+input:focus::placeholder{
+    color:white;
+} 
+
+input:focus::-webkit-input-placeholder{
+    color:white;
+}  
+
+input:focus::-ms-input-placeholder{
+    color:white;
+} 
+
+textarea:focus::placeholder{
+    color:white;
+} 
+
+textarea:focus::-webkit-input-placeholder{
+    color:white;
+} 
+
+textarea:focus::-ms-input-placeholder {
+    color:white;
+} 
 
 /* disables choose state option */
 option[value=""][disabled] {
@@ -126,7 +195,7 @@ textarea:focus{
     color:white;
 }
 
-.information input:hover,
+.flex input:hover,
 select:hover,
 textarea:hover {
     cursor: pointer;
